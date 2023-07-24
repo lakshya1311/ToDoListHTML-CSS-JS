@@ -18,10 +18,10 @@ inputTask.addEventListener('click', () => {
   }
 )
 
-// it is event listener when ever we on the buttons in page and it do has we written in methods
+// Single event listner for all the buttons on the page
 document.addEventListener('click', handler);
 
-// it is the function for function every event that we mention in html
+// it is the function for every event , actions differentiated on the basis of target class
 function handler(e) {
   const target = e.target;
   if (target.className == 'fa fa-plus-circle add') {
@@ -68,7 +68,6 @@ function handler(e) {
       toDoList[i].done = true
     }
     Data();
-
   }
   else if (target.className === 'deltAll') {
     if (toDoList.length == 0) {
@@ -83,7 +82,7 @@ function handler(e) {
 // this button function is to add a tasks to list
 function subButton() {
   let value = inputTask.value;
-  if (value === '') {
+  if (value === '' || value == null) {
     alert('Enter the task');
     return;
   }

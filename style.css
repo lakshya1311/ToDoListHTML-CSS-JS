@@ -60,11 +60,24 @@ input[type=text] {
   color: hsl(206, 5%, 73%);
   font-size: 0.8rem;
   font-weight: lighter;
+  /* cursor: pointer; */
+}
+
+
+.completed .incomplete .deltAll{
   cursor: pointer;
 }
 
-.inputContainer~span:hover,
-.inputContainer~span:active {
+.deltAll{
+  cursor: pointer;
+}
+
+.completed .incomplete .deltAll:hover,
+.completed .incomplete .deltAll:active {
+  color: hsl(210, 2%, 57%);
+}
+.deltAll:hover,
+.deltAll:active {
   color: hsl(210, 2%, 57%);
 }
 
